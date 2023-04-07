@@ -1,28 +1,26 @@
-let game = 0
+const btn = document.querySelector(".begin-btn");
+const question = document.querySelector(".text");
+const buttons = document.querySelector(".buttons");
+const rps = document.querySelectorAll(".rps")
+const kita = document.querySelector(".kita")
 
-while (game < 5){
-        let computerChoice = Math.floor(Math.random() * 3);
-        let playerSelection = prompt("Enter rock, paper, scissors or cancel to stop the game: ");
-
-        if (playerSelection === null){
-            break
-        } else if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors"){
-            console.log("Please enter a valid option.")
-            continue
-        } else if (computerChoice === 0 && playerSelection === "rock" || computerChoice === 1 && playerSelection === "paper" || computerChoice === 2 && playerSelection === "scissors"){
-            console.log(`The computer chose: ${computerChoice} and the player chose: ${playerSelection}`)
-            console.log("It's a draw!")
-            game++
-            continue
-        } else if (computerChoice === 0 && playerSelection === "paper" || computerChoice === 1 && playerSelection === "scissors" || computerChoice === 2 && playerSelection === "rock"){
-            console.log(`The computer chose: ${computerChoice} and the player chose: ${playerSelection}`)
-            console.log("The player won!")
-            game++
-            continue
-        } else {
-            console.log(`The computer chose: ${computerChoice} and the player chose: ${playerSelection}`)
-            console.log("The computer won!")
-            game++
-            continue
-        }
+function clickButton() {
+    question.classList.add("invis");
+    btn.classList.add("invis");
 }
+
+function removeTransition() {
+    this.textContent = "PRESS ROCK PAPER OR SCISSORS";
+    this.classList.remove("invis");
+    buttons.removeChild(kita)
+    rps.forEach(ran => ran.classList.remove("invis"))
+}
+
+function deleteButton(e) {
+    if (e.propertyName !== "opacity") return;
+    buttons.removeChild(btn);
+}
+
+btn.addEventListener("click", clickButton);
+question.addEventListener("transitionend", removeTransition);
+btn.addEventListener("transitionend", deleteButton);

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,800;0,900;0,1000;1,400;1,700&display=swap');
+
+body {
+    background-image: linear-gradient(90deg, #333333, #666A86, #95B8D1, #E8DDB5, #EDAFB8);
+    font-family: "Mulish", sans-serif
+}
+
+.title{
+    color: white;
+    font-size: 64px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+.container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 64px;
+    gap: 48px;
+}
+
+.you-icon, .computer-icon{
+    font-size: 200px;
+    margin-bottom: 10px;
+}
+
+.you-text, .computer-text, .vs{
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.choices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    gap: 16px
+}
+
+.choices div{
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.choices button{
+    padding: 16px 32px 16px 32px;
+    background-color: #EDAFB8;
+    border: solid 4px #C75566;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px black;
+    transition: 0.2s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.text{
+    transition: 0.5s;
+}
+
+.invis {
+    opacity: 0;
+}
+
+.rps{
+    transition: 0.5s;
+}
