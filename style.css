@@ -17,7 +17,6 @@ body {
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding-top: 64px;
     gap: 48px;
 }
@@ -32,6 +31,10 @@ body {
     font-weight: 900;
     color: white;
     text-shadow: 2px 2px black;
+}
+
+.vs{
+    margin-top: 130px;
 }
 
 .choices{
@@ -67,6 +70,18 @@ button:hover{
 
 .text{
     transition: 0.5s;
+}
+
+.points-style{
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px black;
+    transition: 2s;
+}
+
+.transition-class{
+    transition: 10s;
 }
 
 .invis {
